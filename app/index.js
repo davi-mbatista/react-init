@@ -1,17 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { render } from 'react-dom';
 
-class App extends Component {
-    render() {
-        return(
-            <div>
-                <h3>React Starter</h3>
-            </div>
-        )
-    }
-}
+const App = () => <h1>React starter...</h1>
 
-render(
-    <App />,
-    document.querySelector('#root')
-);
+render(<App />, document.querySelector('#root'));
