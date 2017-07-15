@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 const config = {
-    entry: './app/index.js',
+    entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'public'),
         filename: 'bundle.js',
