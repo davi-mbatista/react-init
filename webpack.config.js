@@ -12,7 +12,7 @@ const config = {
     module: {
         rules: [
             {
-                test: /\.(js)$/,
+                test: /\.js$/,
                 exclude: /node_modules/,
                 use: [
                     {
@@ -20,6 +20,9 @@ const config = {
                         options: {
                             cacheDirectory: true
                         }
+                    },
+                    {
+                        loader: 'eslint-loader'
                     }
                 ]
             },
