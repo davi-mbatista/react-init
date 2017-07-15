@@ -1,6 +1,19 @@
 {
   "parser": "babel-eslint",
-    "extends": [
-      "semistandard-react"
-    ]
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "plugins": [
+    "react",
+    "jsx-a11y"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "es6": true
+  }
 }
