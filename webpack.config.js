@@ -19,6 +19,8 @@ const config = {
                     {
                         loader: 'babel-loader',
                         options: {
+                            presets: ['env', 'stage-1', 'react'],
+                            plugins: ['transform-runtime', 'transform-decorators'],
                             cacheDirectory: true
                         }
                     },
