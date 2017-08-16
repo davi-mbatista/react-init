@@ -7,21 +7,9 @@ class App extends Component {
   }
 
   render () {
-    const { counter } = this.state.counter;
-
-    add = () => this.setState(prevState => ({ counter: prevState.counter + 1 }));
-
     return (
       <div>
-        <section>
-          <h1>
-            {counter}
-          </h1>
-        </section>
-        <section>
-          <button onClick={this.add}>Add</button>
-          <button onClick={this.remove}>Remove</button>
-        </section>
+        <h1>lorem</h1>
       </div>
     );
   }
