@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open",
-    "build": "NODE_ENV='production' webpack -p"
+    "build": "NODE_ENV='production' webpack -p",
+    "test": "jest --watch"
   },
   "dependencies": {
     "prop-types": "^15.5.10",
@@ -16,21 +17,21 @@
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.1.1",
-    "babel-plugin-transform-decorators": "^6.24.1",
     "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.5.2",
+    "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
-    "babel-runtime": "^6.23.0",
+    "babel-runtime": "^6.25.0",
     "css-loader": "^0.28.4",
-    "eslint": "^4.2.0",
+    "eslint": "^4.4.1",
     "eslint-loader": "^1.9.0",
-    "eslint-plugin-babel": "^4.1.1",
+    "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.1.0",
-    "html-webpack-plugin": "^2.29.0",
+    "eslint-plugin-react": "^7.2.1",
+    "html-webpack-plugin": "^2.30.1",
+    "jest": "^20.0.4",
     "style-loader": "^0.18.2",
-    "webpack": "^3.0.0",
-    "webpack-dev-server": "^2.5.0"
+    "webpack": "^3.5.4",
+    "webpack-dev-server": "^2.7.1"
   }
 }
