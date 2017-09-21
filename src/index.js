@@ -9,7 +9,7 @@ class App extends Component {
   render () {
     return (
       <div>
-        <h1>lorem</h1>
+        <h1>React Starter</h1>
       </div>
     );
   }

@@ -15,30 +15,11 @@ const config = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: [
-                    {
-                        loader: 'babel-loader',
-                        options: {
-                            presets: ['env', 'stage-1', 'react'],
-                            plugins: ['transform-runtime'],
-                            cacheDirectory: true
-                        }
-                    },
-                    {
-                        loader: 'eslint-loader'
-                    }
-                ]
+                use: ['babel-loader', 'eslint-loader']
             },
             {
                 test: /\.css$/,
-                use: [
-                    {
-                        loader: 'style-loader'
-                    },
-                    {
-                        loader: 'css-loader'
-                    }
-                ]
+                use: ['style-loader', 'css-loader']
             }
         ]
     },

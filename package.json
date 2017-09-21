@@ -4,9 +4,9 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open",
-    "build": "NODE_ENV='production' webpack -p",
-    "test": "jest --watch"
+    "start": "NODE_ENV=develpoment webpack-dev-server --open",
+    "build": "NODE_ENV=production webpack -p",
+    "test": "NODE_ENV=test jest --watch --coverage"
   },
   "dependencies": {
     "prop-types": "^15.5.10",
