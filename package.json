@@ -1,12 +1,15 @@
 {
-  "name": "react-starter",
+  "name": "react-app-start",
   "version": "0.0.1",
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=develpoment webpack-dev-server --open",
-    "build": "NODE_ENV=production webpack -p",
-    "test": "NODE_ENV=test jest --watch --coverage"
+    "develop": "NODE_ENV=develpoment webpack-dev-server --open",
+    "test": "NODE_ENV=test jest",
+    "test:watch": "NODE_ENV=test jest --watch",
+    "test:coverage": "NODE_ENV=test jest --coverage",
+    "test:immersive": "NODE_ENV=test jest --watch --coverage",
+    "build": "NODE_ENV=production webpack -p"
   },
   "dependencies": {
     "prop-types": "^15.5.10",
@@ -14,24 +17,22 @@
     "react-dom": "^15.6.1"
   },
   "devDependencies": {
-    "babel-core": "^6.25.0",
-    "babel-eslint": "^7.2.3",
-    "babel-loader": "^7.1.1",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.0",
+    "babel-loader": "^7.1.2",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
-    "babel-runtime": "^6.25.0",
-    "css-loader": "^0.28.4",
-    "eslint": "^4.4.1",
+    "babel-runtime": "^6.26.0",
+    "eslint": "^4.7.2",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.2.1",
+    "eslint-plugin-react": "^7.3.0",
     "html-webpack-plugin": "^2.30.1",
-    "jest": "^20.0.4",
-    "style-loader": "^0.18.2",
-    "webpack": "^3.5.4",
-    "webpack-dev-server": "^2.7.1"
+    "jest": "^21.1.0",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
   }
 }

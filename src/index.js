@@ -1,20 +1,9 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 
-class App extends Component {
-  state = {
-    counter: 0
-  }
+const App = () => <h1>React</h1>
 
-  render () {
-    return (
-      <div>
-        <h1>React Starter</h1>
-      </div>
-    );
-  }
-}
-
-export default App
-
-render(<App />, document.querySelector('#root'));
+render(
+  <App />,
+  document.querySelector('#root')
+);
