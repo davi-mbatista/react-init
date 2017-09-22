@@ -1,2 +1,3 @@
-# react-starter
-A simple React application template for quick start and control over configuration, in case you want something like this, for some reason...
+# React App Starter
+
+This is a simple template that I've build to acomodate my react needs.

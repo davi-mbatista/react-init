@@ -1,14 +1,11 @@
 const path = require('path');
-
-// plugins
+const webpack = require('webpack');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const config = {
-    entry: './src/index.js',
-    output: {
-        path: path.resolve(__dirname, 'public'),
-        filename: 'bundle.js',
-        publicPath: ''
+module.exports = {
+    entry: {
+        app: path.resolve(__dirname, 'src/index.js')
     },
     module: {
         rules: [
@@ -20,19 +17,23 @@ const config = {
             {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                exclude: /node_modules/,
+                use: ['file-loader']
             }
         ]
     },
-    devServer: {
-        historyApiFallback: true
+    output: {
+        path: path.resolve(__dirname, 'build'),
+        filename: '[name].bundle.js'
     },
     plugins: [
-        new HtmlWebpackPlugin(
-            {
-                template: './public/index.html'
-            }
-        )
+        new webpack.optimize.ModuleConcatenationPlugin(),
+        new CleanWebpackPlugin([path.resolve(__dirname, 'build')]),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, 'public/index.html')
+        })
     ]
 };
-
-module.exports = config;
