@@ -30,6 +30,10 @@ const manifestConfig = {
     ]
 };
 
+/**
+ * uglify configuration for smaller bundle sizes
+ * TODO: Search more about each configuration
+ */
 const uglifyConfig = {
     compress: {
         warnings: false,
