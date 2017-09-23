@@ -5,6 +5,11 @@ import BabelMinifyPlugin from 'babel-minify-webpack-plugin';
 import WebpackPwaManifest from 'webpack-pwa-manifest';
 import common from './webpack.common.babel.js';
 
+
+/**
+ * maninfest.json configuration for progressive web app setup. It uses the WebpackPwaManifest that
+ * is a HtmlWebpackPlugin enhancement
+ */
 const manifestConfig = {
     name: 'React App',
     short_name: 'React App',
