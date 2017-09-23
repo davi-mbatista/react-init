@@ -1,7 +1,6 @@
 import path from 'path';
 import merge from 'webpack-merge';
 import webpack from 'webpack';
-import BabelMinifyPlugin from 'babel-minify-webpack-plugin';
 import WebpackPwaManifest from 'webpack-pwa-manifest';
 import common from './webpack.common.babel.js';
 
