@@ -49,14 +49,6 @@ const htmlTemplateConfig = {
             name: 'msapplication-TileColor',
             content: '#000'
         },
-        {
-            name: 'msapplication-TileImage',
-            content: ''
-        },
-        {
-            name: 'msapplication-tap-highlight',
-            content: 'yes'
-        }
     ]
 };
 
