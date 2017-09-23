@@ -21,10 +21,6 @@ const manifestConfig = {
     display: "standalone",
     inject: true,
     fingerprints: true,
-    ios: {
-        'apple-mobile-web-app-title': 'AppTitle',
-        'apple-mobile-web-app-status-bar-style': 'black'
-    },
     icons: [
         {
             src: path.resolve('public/assets/icon.png'),
