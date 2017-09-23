@@ -12,6 +12,9 @@ const htmlTemplateConfig = {
     title: 'React App',
     appMountId: 'root',
     favicon: path.resolve('public/assets/favicon.ico'),
+    minify: {
+        collapseWhitespace: true,
+    },
     meta: [
         {
             name: 'viewport',
