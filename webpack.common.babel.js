@@ -3,6 +3,9 @@ import webpack from 'webpack';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
+/**
+ * All template configuration using html-webpack-plugin addons
+ */
 const htmlTemplateConfig = {
     inject: false,
     template: require('html-webpack-template'),
