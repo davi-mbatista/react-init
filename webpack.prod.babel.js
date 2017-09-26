@@ -3,7 +3,7 @@ import merge from 'webpack-merge';
 import webpack from 'webpack';
 import WebpackPwaManifest from 'webpack-pwa-manifest';
 import common from './webpack.common.babel.js';
-
+import WorkboxPlugin from 'workbox-webpack-plugin';
 
 /**
  * maninfest.json configuration for progressive web app setup. It uses the WebpackPwaManifest that
@@ -15,7 +15,7 @@ const manifestConfig = {
     description: 'This is a React App',
     background_color: '#000',
     "theme_color": "#000",
-    start_url: "/?homescreen=1",
+    start_url: "/",
     orientation: "portrait",
     display: "standalone",
     inject: true,
@@ -31,7 +31,6 @@ const manifestConfig = {
 
 /**
  * uglify configuration for smaller bundle sizes
- * TODO: Search more about each configuration
  */
 const uglifyConfig = {
     compress: {
@@ -51,6 +50,7 @@ const uglifyConfig = {
     }
 };
 
+
 module.exports = merge(common, {
     plugins: [
         new webpack.DefinePlugin({
@@ -59,6 +59,11 @@ module.exports = merge(common, {
             }
         }),
         new WebpackPwaManifest(manifestConfig),
-        new webpack.optimize.UglifyJsPlugin(uglifyConfig)
+        new webpack.optimize.UglifyJsPlugin(uglifyConfig),
+        new WorkboxPlugin({
+            globDirectory: './build/',
+            globPatterns: ['**/*.{html,js,css}'],
+            swDest: './build/service-worker.js'
+        })
     ]
 });
