@@ -2,10 +2,13 @@
   "parser": "babel-eslint",
   "plugins": [
     "babel",
+    "react",
     "jsx-a11y"
   ],
   "extends": [
-    "plugin:jsx-a11y/recommended"
+    "plugin:jsx-a11y/recommended",
+    "eslint:recommended",
+    "plugin:react/recommended"
   ],
   "env": {
     "browser": true,
