@@ -60,6 +60,11 @@ module.exports = {
             }
         ]
     },
+    resolve: {
+        alias: {
+            components: path.resolve(__dirname, 'src/components/')
+        }
+    },
     plugins: [
         new webpack.optimize.ModuleConcatenationPlugin(),
         new CleanWebpackPlugin(CleanWebpackConfig),
