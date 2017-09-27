@@ -23,8 +23,8 @@ const manifestConfig = {
     name: 'React App',
     short_name: 'React App',
     description: 'This is a React App',
-    background_color: '#000',
-    theme_color: "#000",
+    background_color: '#f5f5f5',
+    theme_color: "#616161",
     start_url: "/",
     orientation: "portrait",
     display: "standalone",
@@ -35,7 +35,7 @@ const manifestConfig = {
             src: path.resolve('public/assets/icons/icon.png'),
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'manifest')
-        },
+        }
     ]
 };
 
