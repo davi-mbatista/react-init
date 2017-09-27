@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 
 const Wrapper = styled('section')`
@@ -40,6 +39,6 @@ class Welcome extends Component {
             </Wrapper>
         );
     }
-};
+}
 
 export default Welcome;
