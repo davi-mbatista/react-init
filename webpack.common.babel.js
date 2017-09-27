@@ -4,56 +4,22 @@ import CleanWebpackPlugin from 'clean-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 /**
- * All template configuration using html-webpack-plugin addons
+ * HtmlWebpackPlugin configurations
  */
-const htmlTemplateConfig = {
-    inject: false,
-    template: require('html-webpack-template'),
-    title: 'React App',
-    appMountId: 'root',
-    favicon: path.resolve('public/assets/favicon.ico'),
+const HtmlWebpackConfig = {
+    inject: true,
+    template: path.resolve(__dirname, 'public/index.html'),
     minify: {
         collapseWhitespace: true,
-    },
-    meta: [
-        {
-            name: 'viewport',
-            content: 'width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes'
-        },
-        {
-            name: 'description',
-            content: 'A React App.'
-        },
-        {
-            name: 'theme-color',
-            content: '#000'
-        },
-        {
-            name: 'mobile-web-app-capable',
-            content: 'yes'
-        },
-        {
-            name: 'application-name',
-            content: 'React App'
-        },
-        {
-            name: 'apple-mobile-web-app-capable',
-            content: 'yes'
-        },
-        {
-            name: 'apple-mobile-web-app-status-bar-style',
-            content: 'black-translucent'
-        },
-        {
-            name: 'apple-mobile-web-app-title',
-            content: 'React App'
-        },
-        {
-            name: 'msapplication-TileColor',
-            content: '#000'
-        },
-    ]
+    }
 };
+
+/**
+ * CleanWebpack configurations
+ */
+const CleanWebpackConfig = [
+    path.resolve(__dirname, 'build')
+];
 
 module.exports = {
     entry: {
@@ -96,7 +62,7 @@ module.exports = {
     },
     plugins: [
         new webpack.optimize.ModuleConcatenationPlugin(),
-        new CleanWebpackPlugin([path.resolve(__dirname, 'build')]),
-        new HtmlWebpackPlugin(htmlTemplateConfig)
+        new CleanWebpackPlugin(CleanWebpackConfig),
+        new HtmlWebpackPlugin(HtmlWebpackConfig)
     ]
 };
