@@ -3,14 +3,16 @@ import merge from 'webpack-merge';
 import webpack from 'webpack';
 import common from './webpack.common.babel.js';
 
+const devServerConfig = {
+    historyApiFallback: true,
+    open: true,
+    overlay: true,
+    hot: true
+};
+
 module.exports = merge(common, {
     devtool: 'inline-source-map',
-    devServer: {
-        historyApiFallback: true,
-        open: true,
-        overlay: true,
-        hot: true,
-    },
+    devServer: devServerConfig,
     plugins: [
         new webpack.HotModuleReplacementPlugin()
     ]
