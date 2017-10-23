@@ -8,10 +8,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
  */
 const HtmlWebpackConfig = {
     inject: true,
-    template: path.resolve(__dirname, 'public/index.html'),
-    minify: {
-        collapseWhitespace: true,
-    }
+    template: path.resolve(__dirname, 'public/index.html')
 };
 
 /**

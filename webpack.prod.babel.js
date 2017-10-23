@@ -44,7 +44,7 @@ const manifestConfig = {
  */
 const uglifyConfig = {
     compress: {
-        warnings: false,
+        warnings: true,
         screw_ie8: true,
         conditionals: true,
         unused: true,

@@ -1,4 +1,3 @@
-import path from 'path';
 import merge from 'webpack-merge';
 import webpack from 'webpack';
 import common from './webpack.common.babel.js';
