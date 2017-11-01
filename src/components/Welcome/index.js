@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 
 const Wrapper = styled('section')`
@@ -20,10 +21,14 @@ const Wrapper = styled('section')`
 `;
 
 class Welcome extends Component {
+    static propTypes = {
+        onClick: PropTypes.func
+    }
+
     render () {
         return(
             <Wrapper>
-                <svg width='70' viewBox='0 0 600 600' fill='#616161'>
+                <svg onClick={this.props.onClick} width='70' viewBox='0 0 600 600' fill='#616161'>
                     <circle cx='299.5' cy='299.6' r='50.2' />
                     <g>
                         <path d='M299.5,414.6c-70.5,0-132.1-8.3-178.2-24.1c-29.9-10.2-55.3-23.8-73.4-39.3c-19.2-16.4-29.4-34.3-29.4-51.6   c0-33.2,36.4-65.7,97.5-86.9c50-17.4,115.2-27.1,183.4-27.1c67,0,131.3,9.4,181,26.6c29.1,10,53.6,23,71,37.4   c18.9,15.8,28.9,33.1,28.9,50c0,34.5-40.7,69.4-106.3,91.1C427.6,406.1,365.6,414.6,299.5,414.6z M299.5,209.6   c-64.7,0-128.7,9.4-175.5,25.7c-56.2,19.6-81.4,46.4-81.4,64.3c0,18.6,27.1,47.9,86.5,68.2c43.6,14.9,102.6,22.8,170.4,22.8   c63.6,0,122.9-8,167-22.7c61.7-20.5,89.9-49.8,89.9-68.3c0-9.5-7.2-20.7-20.3-31.6c-15.1-12.6-37.1-24.1-63.4-33.2   C425.4,218.6,363.9,209.6,299.5,209.6z' />
