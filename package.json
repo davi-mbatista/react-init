@@ -13,16 +13,16 @@
     "build": "NODE_ENV=production webpack -p  --config webpack.prod.babel.js"
   },
   "dependencies": {
-    "emotion": "^8.0.9",
+    "emotion": "^8.0.10",
     "normalize.css": "^7.0.0",
     "prop-types": "^15.6.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-emotion": "^8.0.9"
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-emotion": "^8.0.10"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
-    "babel-eslint": "^8.0.1",
+    "babel-eslint": "^8.0.2",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
@@ -32,7 +32,7 @@
     "clean-webpack-plugin": "^0.1.17",
     "copy-webpack-plugin": "^4.2.0",
     "css-loader": "^0.28.7",
-    "eslint": "^4.10.0",
+    "eslint": "^4.11.0",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-jsx-a11y": "^6.0.2",
@@ -44,9 +44,9 @@
     "jest": "^21.2.1",
     "style-loader": "^0.19.0",
     "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.3",
-    "webpack-merge": "^4.1.0",
+    "webpack-dev-server": "^2.9.4",
+    "webpack-merge": "^4.1.1",
     "webpack-pwa-manifest": "^3.3.2",
-    "workbox-webpack-plugin": "^2.1.0"
+    "workbox-webpack-plugin": "^2.1.1"
   }
 }
