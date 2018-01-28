@@ -1,9 +1,13 @@
+'use strict';
+
 const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const WorkboxPlugin = require('workbox-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const common = require('./webpack.common.js');
 
@@ -44,20 +48,14 @@ const manifestConfig = {
  * uglify configuration for smaller bundle sizes
  */
 const uglifyConfig = {
-    compress: {
-        warnings: true,
-        screw_ie8: true,
-        conditionals: true,
-        unused: true,
-        comparisons: true,
-        sequences: true,
-        dead_code: true,
-        evaluate: true,
-        if_return: true,
-        join_vars: true
-    },
-    output: {
-        comments: false
+    uglifyOptions: {
+        ie8: false,
+        ecma: 8,
+        output: {
+            comments: false,
+            beautify: false,
+        },
+        warnings: false
     }
 };
 
@@ -80,6 +78,13 @@ const toCopyIgnoreConfig = {
 };
 
 /**
+ * CleanWebpack configurations
+ */
+const cleanWebpackConfig = [
+    path.resolve(__dirname, 'build')
+];
+
+/**
  * Workbox configurations
  */
 const workboxConfig = {
@@ -88,11 +93,13 @@ const workboxConfig = {
     swDest: './build/service-worker.js'
 };
 
+
 module.exports = merge(common, {
     plugins: [
+        new CleanWebpackPlugin(cleanWebpackConfig),
+        new UglifyJsPlugin(uglifyConfig),
         new webpack.DefinePlugin(envChangeConfig),
         new WebpackPwaManifest(manifestConfig),
-        new webpack.optimize.UglifyJsPlugin(uglifyConfig),
         new CopyWebpackPlugin(toCopyAddConfig, toCopyIgnoreConfig),
         new WorkboxPlugin(workboxConfig),
     ]

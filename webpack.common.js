@@ -1,6 +1,6 @@
+'use strict';
+
 const path = require('path');
-const webpack = require('webpack');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 /**
@@ -10,13 +10,6 @@ const HtmlWebpackConfig = {
     inject: true,
     template: path.resolve(__dirname, 'public/index.html')
 };
-
-/**
- * CleanWebpack configurations
- */
-const CleanWebpackConfig = [
-    path.resolve(__dirname, 'build')
-];
 
 module.exports = {
     entry: {
@@ -29,13 +22,15 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.html$/,
-                use: ['html-loader']
+                enforce: "pre",
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: "eslint-loader",
             },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: ['eslint-loader', 'babel-loader']
+                loader: 'babel-loader'
             },
             {
                 test: /\.css$/,
@@ -52,6 +47,10 @@ module.exports = {
                 ]
             },
             {
+                test: /\.html$/,
+                use: ['html-loader']
+            },
+            {
                 test: /\.(png|svg|jpg|gif)$/,
                 use: ['file-loader']
             }
@@ -63,8 +62,6 @@ module.exports = {
         }
     },
     plugins: [
-        new webpack.optimize.ModuleConcatenationPlugin(),
-        new CleanWebpackPlugin(CleanWebpackConfig),
         new HtmlWebpackPlugin(HtmlWebpackConfig)
     ]
 };
