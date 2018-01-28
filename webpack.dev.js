@@ -7,10 +7,8 @@ const common = require('./webpack.common.js');
 
 const devServerConfig = {
     compress: true,
-    clientLogLevel: 'none',
     contentBase: path.resolve(__dirname, '/public'),
     watchContentBase: true,
-    quiet: true,
     historyApiFallback: {
         disableDotRule: true
     },

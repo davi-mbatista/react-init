@@ -1,18 +1,10 @@
-import React, { Component, Fragment } from 'react';
+import React from 'react';
 import { render } from 'react-dom';
 
-import registerServiceWorker from './registerServiceWorker';
 import { Welcome } from 'components';
+import registerServiceWorker from './registerServiceWorker';
 
-class App extends Component {
-    render() {
-        return(
-        <Fragment>
-            <Welcome />
-        </Fragment>
-      );
-    }
-}
+const App = () => <Welcome />
 
 render(<App />, document.querySelector('#root'));
 

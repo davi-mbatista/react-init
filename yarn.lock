@@ -3949,12 +3949,6 @@ internal-ip@1.2.0:
   dependencies:
     meow "^3.3.0"
 
-interpolate-html-plugin@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/interpolate-html-plugin/-/interpolate-html-plugin-2.0.0.tgz#721fd3e995e7270024daf733d297a1b83a907e9a"
-  dependencies:
-    escape-string-regexp "^1.0.5"
-
 interpret@^1.0.0:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.0.4.tgz#820cdd588b868ffb191a809506d6c9c8f212b1b0"
@@ -6306,7 +6300,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.6.0:
+prop-types@^15.5.0, prop-types@^15.6.0:
   version "15.6.0"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.0.tgz#ceaf083022fc46b4a35f69e13ef75aed0d639856"
   dependencies:
@@ -6462,6 +6456,12 @@ react-emotion@^8.0.12:
   dependencies:
     babel-plugin-emotion "^8.0.12"
     emotion-utils "^8.0.12"
+
+react-loadable@^5.3.1:
+  version "5.3.1"
+  resolved "https://registry.yarnpkg.com/react-loadable/-/react-loadable-5.3.1.tgz#9699e9a08fed49bacd69caaa282034b62a76bcdd"
+  dependencies:
+    prop-types "^15.5.0"
 
 react@^16.2.0:
   version "16.2.0"
