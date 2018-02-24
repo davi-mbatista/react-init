@@ -1,7 +1,6 @@
 const merge = require('webpack-merge');
 const path = require('path');
 const webpack = require('webpack');
-const FlowWebpackPlugin = require('flow-webpack-plugin');
 
 const common = require('./webpack.common.js');
 
@@ -20,10 +19,5 @@ const devServerConfig = {
 module.exports = merge(common, {
     devtool: 'inline-source-map',
     devServer: devServerConfig,
-    plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-        new FlowWebpackPlugin({
-            flowPath: require.main.require('flow-bin'),
-        }),
-    ],
+    plugins: [new webpack.HotModuleReplacementPlugin()],
 });
