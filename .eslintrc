@@ -1,22 +1,14 @@
 {
-  "parser": "babel-eslint",
-  "plugins": [
-    "babel",
-    "prettier",
-    "jsx-a11y"
-  ],
-  "extends": [
-    "eslint:recommended",
-    "prettier",
-    "react-app",
-    "plugin:jsx-a11y/recommended"
-  ],
-  "env": {
-    "browser": true,
-    "es6": true,
-    "node": true
-  },
-  "rules": {
-    "prettier/prettier": "warn"
-  }
+    "parser": "babel-eslint",
+    "plugins": ["babel", "prettier", "jsx-a11y"],
+    "extends": ["eslint:recommended", "prettier", "react-app", "plugin:jsx-a11y/recommended"],
+    "rules": { "prettier/prettier": "warn" },
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true,
+        "jest": true,
+        "serviceworker": true,
+        "worker": true
+    }
 }

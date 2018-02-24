@@ -1,11 +1,9 @@
-'use strict';
-
 const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const WorkboxPlugin = require('workbox-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
@@ -16,8 +14,8 @@ const common = require('./webpack.common.js');
  */
 const envChangeConfig = {
     'process.env': {
-        'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-    }
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+    },
 };
 
 /**
@@ -29,19 +27,19 @@ const manifestConfig = {
     short_name: 'React App',
     description: 'This is a React App',
     background_color: '#f5f5f5',
-    theme_color: "#616161",
-    start_url: "/",
-    orientation: "portrait",
-    display: "standalone",
+    theme_color: '#616161',
+    start_url: '/',
+    orientation: 'portrait',
+    display: 'standalone',
     inject: true,
     fingerprints: true,
     icons: [
         {
             src: path.resolve('public/assets/icons/icon.png'),
             sizes: [96, 128, 192, 256, 384, 512],
-            destination: path.join('assets', 'manifest')
-        }
-    ]
+            destination: path.join('assets', 'manifest'),
+        },
+    ],
 };
 
 /**
@@ -55,8 +53,8 @@ const uglifyConfig = {
             comments: false,
             beautify: false,
         },
-        warnings: false
-    }
+        warnings: false,
+    },
 };
 
 /**
@@ -66,23 +64,21 @@ const toCopyAddConfig = [
     {
         context: 'public/assets',
         from: 'icons/*.*',
-        to: './assets'
-    }
+        to: './assets',
+    },
 ];
 
 /**
  * Items to ignore in copy configurations
  */
 const toCopyIgnoreConfig = {
-    ignore: ['*.sketch']
+    ignore: ['*.sketch'],
 };
 
 /**
  * CleanWebpack configurations
  */
-const cleanWebpackConfig = [
-    path.resolve(__dirname, 'build')
-];
+const cleanWebpackConfig = [path.resolve(__dirname, 'build')];
 
 /**
  * Workbox configurations
@@ -90,9 +86,8 @@ const cleanWebpackConfig = [
 const workboxConfig = {
     globDirectory: './build/',
     globPatterns: ['**/*.{html,js,css,png}'],
-    swDest: './build/service-worker.js'
+    swDest: './build/service-worker.js',
 };
-
 
 module.exports = merge(common, {
     plugins: [
@@ -102,5 +97,5 @@ module.exports = merge(common, {
         new WebpackPwaManifest(manifestConfig),
         new CopyWebpackPlugin(toCopyAddConfig, toCopyIgnoreConfig),
         new WorkboxPlugin(workboxConfig),
-    ]
+    ],
 });

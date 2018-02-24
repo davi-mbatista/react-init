@@ -1,5 +1,3 @@
-'use strict';
-
 const merge = require('webpack-merge');
 const path = require('path');
 const webpack = require('webpack');
@@ -12,11 +10,11 @@ const devServerConfig = {
     contentBase: path.resolve(__dirname, '/public'),
     watchContentBase: true,
     historyApiFallback: {
-        disableDotRule: true
+        disableDotRule: true,
     },
     open: true,
     overlay: true,
-    hot: true
+    hot: true,
 };
 
 module.exports = merge(common, {
@@ -25,7 +23,7 @@ module.exports = merge(common, {
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new FlowWebpackPlugin({
-            flowPath: require.main.require('flow-bin')
-        })
-    ]
+            flowPath: require.main.require('flow-bin'),
+        }),
+    ],
 });
