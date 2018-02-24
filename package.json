@@ -58,9 +58,6 @@
         "workbox-webpack-plugin": "^2.1.2"
     },
     "lint-staged": {
-        "./src/**/*.{js, json, md, css}": [
-            "prettier --config ./.prettierrc --write",
-            "git add"
-        ]
+        "./src/**/*.{js, json, md, css}": ["prettier --config ./.prettierrc --write", "git add"]
     }
 }
