@@ -1,20 +1,14 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-/**
- * HtmlWebpackPlugin configurations
- */
-const HtmlWebpackConfig = {
-    inject: true,
-    template: path.resolve(__dirname, 'public/index.html'),
-};
+const config = require('./config');
+const HtmlWebpackPlugin = require('./plugins/HtmlWebpack');
 
 module.exports = {
+    context: config.PATHS.SRC,
     entry: {
-        app: path.resolve(__dirname, 'src/index.js'),
+        app: './index.js',
     },
     output: {
-        path: path.resolve(__dirname, 'build'),
+        path: config.PATHS.BUILD,
+        publicPath: '/',
         filename: '[name].bundle.js',
     },
     module: {
@@ -56,8 +50,8 @@ module.exports = {
     },
     resolve: {
         alias: {
-            components: path.resolve(__dirname, 'src/components/'),
+            components: 'components',
         },
     },
-    plugins: [new HtmlWebpackPlugin(HtmlWebpackConfig)],
+    plugins: [HtmlWebpackPlugin],
 };
