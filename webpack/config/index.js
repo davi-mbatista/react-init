@@ -1,11 +1,11 @@
 const ENVIRONMENT = require('./environment');
-const NAME = require('./name');
+const NAMES = require('./names');
 const PATHS = require('./paths');
 const SERVER = require('./server');
 
 module.exports = {
     ENVIRONMENT,
-    NAME,
+    NAMES,
     PATHS,
     SERVER,
 };
