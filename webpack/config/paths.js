@@ -8,12 +8,14 @@ const _fragments = {
     build: 'build',
     public: 'public',
     source: 'src',
+    production: 'production',
 };
 
 module.exports = {
     _fragments,
     environment: resolveApp('.env'),
     build: resolveApp(`${_fragments.build}`),
+    production: resolveApp(`${_fragments.build}/${_fragments.production}`),
     public: resolveApp(`${_fragments.public}`),
     html: resolveApp(`${_fragments.public}/index.html`),
     assets: resolveApp(`${_fragments.public}/${_fragments.assets}/`),

@@ -5,7 +5,7 @@ const config = require('../config');
 const configuration = {
     globDirectory: config.paths.build,
     globPatterns: ['**/*.{html,js,css,png}'],
-    swDest: `${config.paths.build}/${config.filenames.serviceWorker}.js`,
+    swDest: `${config.paths.build}/${config.environment}/${config.filenames.serviceWorker}.js`,
 };
 
 module.exports = new WorkboxWebpackPlugin(configuration);
