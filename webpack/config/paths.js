@@ -1,25 +1,25 @@
 const path = require('path');
+const fs = require('fs');
 
-const _FRAGMENTS = {
-    ASSETS: 'assets',
-    BUILD: 'build',
-    PUBLIC: 'public',
-    SRC: 'src',
+const resolveApp = relativePath => path.resolve(fs.realpathSync(process.cwd()), relativePath);
+
+const _fragments = {
+    assets: 'assets',
+    build: 'build',
+    public: 'public',
+    source: 'src',
 };
 
-const _DEEP = '../../';
-
-const ASSETS = path.resolve(__dirname, `${_DEEP}${_FRAGMENTS.PUBLIC}/${_FRAGMENTS.ASSETS}`);
-const BUILD = path.resolve(__dirname, `${_DEEP}${_FRAGMENTS.BUILD}`);
-const PUBLIC = path.resolve(__dirname, `${_DEEP}${_FRAGMENTS.PUBLIC}`);
-const ROOT = path.resolve(__dirname, _DEEP);
-const SRC = path.resolve(__dirname, `${_DEEP}${_FRAGMENTS.SRC}`);
-
 module.exports = {
-    _FRAGMENTS,
-    ASSETS,
-    BUILD,
-    PUBLIC,
-    ROOT,
-    SRC,
+    _fragments,
+    environment: resolveApp('.env'),
+    build: resolveApp(`${_fragments.build}`),
+    public: resolveApp(`${_fragments.public}`),
+    html: resolveApp(`${_fragments.public}/index.html`),
+    assets: resolveApp(`${_fragments.public}/${_fragments.assets}/`),
+    src: resolveApp(`${_fragments.source}`),
+    root: resolveApp(''),
+    index: resolveApp(`src/index.js`),
+    package: resolveApp('package.json'),
+    nodeModules: resolveApp('node_modules'),
 };

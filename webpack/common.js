@@ -3,12 +3,12 @@ const config = require('./config');
 const HtmlWebpackPlugin = require('./plugins/HtmlWebpack');
 
 module.exports = {
-    context: config.PATHS.SRC,
+    context: config.paths.src,
     entry: {
         app: './index.js',
     },
     output: {
-        path: config.PATHS.BUILD,
+        path: config.paths.build,
         publicPath: '/',
         filename: '[name].bundle.js',
     },

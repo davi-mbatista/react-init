@@ -1,4 +1,3 @@
-const path = require('path');
 const paths = require('../paths');
 
 module.exports = [
@@ -14,13 +13,13 @@ module.exports = [
                 },
             },
         ],
-        exclude: path.resolve(`${paths.ROOT}/node_modules/`),
-        include: paths.SRC,
+        exclude: paths.nodeModules,
+        include: paths.src,
     },
     {
         test: /\.(js|jsx)$/,
-        exclude: path.resolve(`${paths.ROOT}/node_modules/`),
-        include: paths.SRC,
+        exclude: paths.nodeModules,
+        include: paths.src,
         loader: 'babel-loader',
         options: {
             // This is a feature of `babel-loader` for webpack (not Babel itself).

@@ -4,7 +4,7 @@ const config = require('../config');
 
 const copy = [
     {
-        context: config.PATHS.ASSETS,
+        context: config.paths.assets,
         from: 'icons/*.*',
         to: './assets',
     },

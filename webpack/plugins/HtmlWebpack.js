@@ -3,7 +3,7 @@ const config = require('../config');
 
 const configuration = {
     inject: true,
-    template: `${config.PATHS.PUBLIC}/index.html`,
+    template: config.paths.html,
 };
 
 module.exports = new HtmlWebpackPlugin(configuration);

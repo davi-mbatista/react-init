@@ -21,7 +21,7 @@ const configuration = {
     fingerprints: true,
     icons: [
         {
-            src: path.resolve(`${config.PATHS.ASSETS}/icons/icon.png`),
+            src: path.resolve(`${config.paths.assets}/icons/icon.png`),
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'manifest'),
         },
