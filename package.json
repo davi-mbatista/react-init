@@ -5,8 +5,8 @@
     "author": "machadobatista.davi@gmail.com",
     "main": "index.js",
     "scripts": {
-        "start": "webpack-dev-server --config webpack/development.js",
-        "build:production": "webpack -p --config webpack/production.js",
+        "start": "NODE_ENV=development webpack-dev-server --config webpack/development.js",
+        "build:production": "NODE_ENV=production webpack -p --config webpack/production.js",
         "test": "NODE_ENV=test jest",
         "test:watch": "NODE_ENV=test jest --watch",
         "test:coverage": "NODE_ENV=test jest --coverage",
@@ -60,9 +60,6 @@
         "workbox-webpack-plugin": "^2.1.3"
     },
     "lint-staged": {
-        "./src/**/*.{js, json, md, css}": [
-            "prettier --config ./.prettierrc --write",
-            "git add"
-        ]
+        "./src/**/*.{js, json, md, css}": ["prettier --config ./.prettierrc --write", "git add"]
     }
 }
