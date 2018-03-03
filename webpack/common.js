@@ -1,6 +1,6 @@
 const config = require('./config');
 
-const HtmlWebpackPlugin = require('./plugins/HtmlWebpack');
+const plugins = require('./plugins');
 
 module.exports = {
     context: config.paths.src,
@@ -20,5 +20,5 @@ module.exports = {
             components: 'components',
         },
     },
-    plugins: [HtmlWebpackPlugin],
+    plugins: [plugins.HtmlWebpack],
 };

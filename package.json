@@ -46,6 +46,7 @@
         "html-webpack-plugin": "^3.0.4",
         "html-webpack-template": "^6.1.0",
         "husky": "^0.14.3",
+        "ip": "^1.1.5",
         "jest": "^22.4.2",
         "lint-staged": "^7.0.0",
         "prettier": "^1.11.1",
@@ -60,6 +61,9 @@
         "workbox-webpack-plugin": "^2.1.3"
     },
     "lint-staged": {
-        "./src/**/*.{js, json, md, css}": ["prettier --config ./.prettierrc --write", "git add"]
+        "./src/**/*.{js, json, md, css}": [
+            "prettier --config ./.prettierrc --write",
+            "git add"
+        ]
     }
 }

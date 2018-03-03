@@ -13,10 +13,10 @@ module.exports = merge(common, {
     },
     plugins: [
         plugins.DefineEnvironment(config.environment.production),
-        plugins.CleanWebpackPlugin,
-        plugins.UglifyJSPlugin,
-        plugins.PwaManifestPlugin,
-        plugins.CopyWebpackPlugin,
-        plugins.WorkBoxPlugin,
+        plugins.CleanWebpack,
+        plugins.UglifyJs,
+        plugins.PwaManifest,
+        plugins.CopyWebpack,
+        plugins.WorkBox,
     ],
 });
