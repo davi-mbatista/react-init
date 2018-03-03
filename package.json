@@ -5,8 +5,8 @@
     "author": "machadobatista.davi@gmail.com",
     "main": "index.js",
     "scripts": {
-        "start": "NODE_ENV=development webpack-dev-server --config webpack/development.js",
-        "build:production": "NODE_ENV=production webpack -p --config webpack/production.js",
+        "start": "webpack-dev-server --config webpack/development.js",
+        "build:production": "webpack -p --config webpack/production.js",
         "test": "NODE_ENV=test jest",
         "test:watch": "NODE_ENV=test jest --watch",
         "test:coverage": "NODE_ENV=test jest --coverage",

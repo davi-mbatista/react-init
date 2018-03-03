@@ -1,12 +1,8 @@
 const merge = require('webpack-merge');
 
-const config = require('./config');
 const common = require('./common.js');
-const WorkBoxPlugin = require('./plugins/WorkBox');
-const UglifyJSPlugin = require('./plugins/UglifyJS');
-const PwaManifestPlugin = require('./plugins/PwaManifest');
-const CleanWebpackPlugin = require('./plugins/CleanWebpack');
-const CopyWebpackPlugin = require('./plugins/CopyWebpack');
+const config = require('./config');
+const plugins = require('./plugins');
 
 module.exports = merge(common, {
     mode: 'production',
@@ -16,10 +12,11 @@ module.exports = merge(common, {
         filename: '[name].bundle.js',
     },
     plugins: [
-        CleanWebpackPlugin,
-        UglifyJSPlugin,
-        PwaManifestPlugin,
-        CopyWebpackPlugin,
-        WorkBoxPlugin,
+        plugins.DefineEnvironment(config.environment.production),
+        plugins.CleanWebpackPlugin,
+        plugins.UglifyJSPlugin,
+        plugins.PwaManifestPlugin,
+        plugins.CopyWebpackPlugin,
+        plugins.WorkBoxPlugin,
     ],
 });

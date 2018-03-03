@@ -1,1 +1,8 @@
-module.exports = process.env.NODE_ENV;
+module.exports = {
+    development: {
+        NODE_ENV: JSON.stringify('development'),
+    },
+    production: {
+        NODE_ENV: JSON.stringify('production'),
+    },
+};
