@@ -9,6 +9,7 @@ const CleanWebpackPlugin = require('./plugins/CleanWebpack');
 const CopyWebpackPlugin = require('./plugins/CopyWebpack');
 
 module.exports = merge(common, {
+    mode: 'production',
     output: {
         path: config.paths.production,
         publicPath: '/',
