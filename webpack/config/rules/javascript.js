@@ -9,7 +9,7 @@ module.exports = [
                 loader: require.resolve('eslint-loader'),
                 options: {
                     eslintPath: require.resolve('eslint'),
-                    quiet: true,
+                    emitWarning: true,
                 },
             },
         ],

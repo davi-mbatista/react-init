@@ -9,7 +9,6 @@ module.exports = {
     watchContentBase: true,
     historyApiFallback: true,
     clientLogLevel: 'none',
-    quiet: true,
     host: host,
     open: true,
     overlay: true,
