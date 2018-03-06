@@ -18,12 +18,12 @@
         "prop-types": "^15.6.1",
         "react": "^16.2.0",
         "react-dom": "^16.2.0",
-        "styled-components": "^3.1.6"
+        "styled-components": "^3.2.0"
     },
     "devDependencies": {
         "babel-core": "^6.26.0",
         "babel-eslint": "^8.2.2",
-        "babel-loader": "^7.1.3",
+        "babel-loader": "^7.1.4",
         "babel-plugin-transform-runtime": "^6.23.0",
         "babel-preset-env": "^1.6.1",
         "babel-preset-react": "^6.24.1",
@@ -43,7 +43,7 @@
         "eslint-plugin-react": "^7.1.0",
         "file-loader": "^1.1.11",
         "html-loader": "^0.5.5",
-        "html-webpack-plugin": "^3.0.4",
+        "html-webpack-plugin": "^3.0.6",
         "html-webpack-template": "^6.1.0",
         "husky": "^0.14.3",
         "ip": "^1.1.5",
