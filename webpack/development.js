@@ -9,7 +9,6 @@ module.exports = merge(common, {
     devServer: config.server,
     plugins: [
         plugins.DefineEnvironment(config.environment.development),
-        plugins.ErrorOverlay,
         plugins.HotModuleReplacement,
     ],
 });

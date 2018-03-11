@@ -5,7 +5,6 @@ const host = ip.address() || '0.0.0.0';
 
 module.exports = {
     contentBase: `${paths._fragments.public}/`,
-    disableHostCheck: true,
     watchContentBase: true,
     historyApiFallback: true,
     clientLogLevel: 'none',
