@@ -18,7 +18,7 @@
         "prop-types": "^15.6.1",
         "react": "^16.2.0",
         "react-dom": "^16.2.0",
-        "styled-components": "^3.2.1"
+        "styled-components": "^3.2.3"
     },
     "devDependencies": {
         "babel-core": "^6.26.0",
@@ -47,18 +47,18 @@
         "html-webpack-template": "^6.1.0",
         "husky": "^0.14.3",
         "ip": "^1.1.5",
-        "jest": "^22.4.2",
+        "jest": "^23.0.0-alpha.0",
         "lint-staged": "^7.0.0",
         "prettier": "^1.11.1",
         "react-dev-utils": "^5.0.0",
         "style-loader": "^0.20.3",
         "uglifyjs-webpack-plugin": "^1.2.3",
         "webpack": "^4.1.1",
-        "webpack-cli": "^2.0.11",
+        "webpack-cli": "^2.0.12",
         "webpack-dev-server": "^3.1.1",
         "webpack-merge": "^4.1.2",
-        "webpack-pwa-manifest": "^3.6.1",
-        "workbox-webpack-plugin": "^2.1.3"
+        "webpack-pwa-manifest": "^3.6.2",
+        "workbox-webpack-plugin": "^3.0.0"
     },
     "lint-staged": {
         "./src/**/*.{js, json, md, css}": [
