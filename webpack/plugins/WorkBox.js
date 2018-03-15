@@ -5,7 +5,8 @@ const config = require('../config');
 const configuration = {
     clientsClaim: true,
     skipWaiting: true,
-    swDest: `${config.paths.build}/${process.env.NODE_ENV}/${config.filenames.serviceWorker}.js`,
+    swDest: `${config.filenames.serviceWorker}.js`,
+    globDirectory: '.',
 };
 
 module.exports = new GenerateSW(configuration);
