@@ -13,7 +13,6 @@ const _fragments = {
 
 module.exports = {
     _fragments,
-    environment: resolveApp('.env'),
     build: resolveApp(`${_fragments.build}`),
     production: resolveApp(`${_fragments.build}/${_fragments.production}`),
     public: resolveApp(`${_fragments.public}`),
