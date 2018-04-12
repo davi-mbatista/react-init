@@ -15,10 +15,5 @@ module.exports = {
     module: {
         rules: config.rules,
     },
-    resolve: {
-        alias: {
-            components: 'components',
-        },
-    },
     plugins: [plugins.HtmlWebpack],
 };
