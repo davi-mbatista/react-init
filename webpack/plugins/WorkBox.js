@@ -6,7 +6,6 @@ const configuration = {
     clientsClaim: true,
     skipWaiting: true,
     swDest: `${config.filenames.serviceWorker}.js`,
-    globDirectory: '.',
 };
 
 module.exports = new GenerateSW(configuration);
