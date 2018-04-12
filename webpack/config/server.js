@@ -1,14 +1,11 @@
 const paths = require('./paths');
 var ip = require('ip');
 
-const host = ip.address() || '0.0.0.0';
-
 module.exports = {
     contentBase: `${paths._fragments.public}/`,
     watchContentBase: true,
     historyApiFallback: true,
     clientLogLevel: 'none',
-    host: host,
     open: true,
     overlay: true,
 };
