@@ -9,7 +9,7 @@ module.exports = merge(common, {
     output: {
         path: config.paths.production,
         publicPath: '/',
-        filename: '[name].bundle.js',
+        filename: '[name].[chunkhash].js',
     },
     plugins: [
         plugins.DefineEnvironment(config.environment.production),
